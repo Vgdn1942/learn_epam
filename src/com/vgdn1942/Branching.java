@@ -21,17 +21,16 @@ public class Branching {
 
 class OneB {
     void methodOne(int a, int b) {
-        String ret = "";
         if ((a + b) < 180) {
-            System.out.println("Triangle exists");
+            System.out.println("Треугольник существует");
         } else {
-            System.out.println("Triangle NOT exists");
+            System.out.println("Треугольник НЕ существует");
             return;
         }
         if (((a + b) == 90) || (a == 90) || (b == 90)) {
-            System.out.println("Triangle right");
+            System.out.println("Треугольник прямоугольный");
         } else {
-            System.out.println("Triangle NOT right");
+            System.out.println("Треугольник НЕ прямоугольный");
         }
     }
 }
