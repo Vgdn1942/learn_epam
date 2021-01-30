@@ -103,7 +103,7 @@ class FourD {
         int min = A[0];
         int max_var = 0;
         int min_var = 0;
-        int temp = 0;
+        int temp;
         for (int i = 0; i < A.length; i++) { // Обходим массив
             if (A[i] > max) {
                 max = A[i];
@@ -167,8 +167,7 @@ class EightD {
 //    8. Дана последовательность целых чисел а1 ,а2 ,..., аn.
 //    Образовать новую последовательность, выбросив из исходной те члены, которые равны min(а1 ,а2 ,..., аn).
     void methodEight(int[] A) {
-        ArrayList<Integer> arrA = new ArrayList<Integer>();
-        int res = 0;
+        ArrayList<Integer> arrA = new ArrayList<>();
         for (int i = 0; i < A.length - 1; i++) { // Обходим массив
             int min = Math.min(A[i], A[i+1]);
             if (min == A[i]) {
