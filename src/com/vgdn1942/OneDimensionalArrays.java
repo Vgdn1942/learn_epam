@@ -1,6 +1,5 @@
 package com.vgdn1942;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class OneDimensionalArrays {
@@ -167,17 +166,17 @@ class EightD {
 //    8. Дана последовательность целых чисел а1 ,а2 ,..., аn.
 //    Образовать новую последовательность, выбросив из исходной те члены, которые равны min(а1 ,а2 ,..., аn).
     void methodEight(int[] A) {
-        ArrayList<Integer> arrA = new ArrayList<>();
+        int[] arrA = new int[A.length - 1];
         for (int i = 0; i < A.length - 1; i++) { // Обходим массив
             int min = Math.min(A[i], A[i+1]);
             if (min == A[i]) {
-                arrA.add(A[i+1]);
+                arrA[i] = A[i+1];
             } else {
-                arrA.add(A[i]);
+                arrA[i] = A[i];
             }
-            System.out.println(Math.min(A[i], A[i+1]));
+            //System.out.println(Math.min(A[i], A[i+1]));
         }
-        System.out.println("Новый массив arrA = " + arrA.toString());
+        System.out.println("Новый массив arrA = " + Arrays.toString(arrA));
     }
 }
 
