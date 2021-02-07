@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 public class StringAsAnArray {
     public static void main(String[] args) {
-        String[] someCase = new String[] {"someString", "camelCase", "snakeCase"};
+        String[] someCase = new String[]{"someString", "camelCase", "snakeCase"};
         String someString = "Some word, hello word, first word, any word";
         String numString = " I have 22 bananas,   121     pencils,   12 bowls   and 32  apples ";
 
         OneH one = new OneH();
         one.methodOne(someCase);
-        
+
         TwoH two = new TwoH();
         two.methodTwo(someString);
 
@@ -47,7 +47,7 @@ class TwoH {
 class ThreeH {
     void methodThree(String str) {
         System.out.println("Строка = " + str);
-        str = str.replaceAll("[^0-9]+","");
+        str = str.replaceAll("[^0-9]+", "");
         System.out.println("Цифры в строке = " + str);
         int count = str.length();
         System.out.println("Количество цифр в строке = " + count);
