@@ -49,9 +49,8 @@ class OneI {
         int max = 0;
         Matcher matcher = Pattern.compile("( )\\1+").matcher(str);
         while (matcher.find()) {
-            String buf = matcher.group();
-            if (buf.length() > max) {
-                max = buf.length();
+            if (matcher.groupCount() > max) {
+                max = matcher.groupCount();
             }
         }
         System.out.println("Наибольшее количество подряд идущих пробелов: " + max);
