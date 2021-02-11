@@ -55,6 +55,12 @@ public class Train {
     private int number;
     private String time;
 
+    Train(String destination, int number, String time) {
+        this.setDestination(destination);
+        this.setNumber(number);
+        this.setTime(time);
+    }
+    
     public void setDestination(String destination) {
         this.destination = destination;
     }
@@ -77,12 +83,6 @@ public class Train {
 
     public String getTime() {
         return time;
-    }
-
-    Train(String destination, int number, String time) {
-        this.setDestination(destination);
-        this.setNumber(number);
-        this.setTime(time);
     }
 
     @Override
