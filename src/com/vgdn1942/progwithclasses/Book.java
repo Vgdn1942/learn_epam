@@ -46,7 +46,7 @@ class InfoBook {
         this(10);
     }
 
-    public void pushCustomer(Book customer) {
+    public void pushCustomer(Book book) {
         if (size >= capacity) {
             Book[] buffer = new Book[capacity * 2];
             if (size >= 0) System.arraycopy(books, 0, buffer, 0, size);
@@ -54,7 +54,7 @@ class InfoBook {
             books = buffer;
             capacity = capacity * 2;
         }
-        books[size] = customer;
+        books[size] = book;
         size++;
     }
 
